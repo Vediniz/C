@@ -1,3 +1,8 @@
+/*ATIVIDADE►Atividade 3
+►Faça  um  programa  em  C  que  declare  dois  vetores  de números  reais  com  20  elementos  cada.  Esses  elementos devem ser gerados aleatoriamente. 
+►Crie  um  novo  vetor  que  seja  a  intersecção  entre  os  2 vetores  anteriores,  ou  seja,  que  terá  em  apenas  os números que estão em ambos os vetores. 
+►Não deve conter números repetidos*/
+
 #include <stdio.h>
 #include <stdlib.h> 
 
@@ -9,25 +14,23 @@ int main(){
     int cont = 0;
 
     for(int i = 0; i < 20; i++){
-        vetor_um[i] = rand() % 10;
-        vetor_dois[i] = rand()% 10;
+        vetor_um[i] = ((float)((rand()%100)+2) / ((float) (rand()%5)+1));
+        vetor_dois[i] = ((float)((rand()%100)+2) / ((float) (rand()%5)+1));
     } 
     
 
 
     for(int i = 0; i < 20; i++){
-        temp = vetor_um[i];
-
         for(int j = 0; j < 20; j++){
-            if(temp == vetor_dois[j]){
+            if(vetor_um[i] == vetor_dois[j]){
                 
                 for(int k = 0; k < 20; k++){
-                    if(temp != interseccao[k] && (k == 19)){
+                    if(vetor_um[i] != interseccao[k] && (k == 19)){
                         interseccao[cont] = vetor_dois[j];
                         cont++;
                     }
                     else{
-                        if(temp == interseccao[k]){
+                        if(vetor_um[i] == interseccao[k]){
                             k = 19;
                         }
                     }
@@ -38,14 +41,22 @@ int main(){
         }
       
 
-    
-
+    printf("vetor um:\n");
+    for(int i = 0; i < 20; i++){
+        printf(" [%f]", vetor_um[i]);
+       
+    }
+    printf("\nvetor dois:\n");
+    for(int i = 0; i < 20; i++){
+        printf(" [%f]", vetor_dois[i]);
+       
+    }
+    printf("\nInterseccao:\n ");
     for(int i = 0; i < cont; i++){
-        printf(" %f", interseccao[i]);
+        printf(" \n%f", interseccao[i]);
        
     }
 
-    printf("%d", cont);
 
     return 0;
 

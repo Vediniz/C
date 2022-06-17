@@ -1,3 +1,11 @@
+/*
+►Atividade 2
+►Faça um programa em C com dois vetores com 5 números inteiros cada, gerados aleatoriamente.
+►Na  sequência,  ordenar  os  vetores  na  ordem  crescente. Para a ordenação utilize o método bolha. 
+►Criar  um  terceiro  vetor  com  10  posições  em  ordem crescente, resultante da intercalação dos dois vetores.
+►Exibir os elementos do terceiro vetor na tela.
+*/
+
 #include <stdio.h> 
 #include <stdlib.h>
 

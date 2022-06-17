@@ -1,3 +1,10 @@
+/*
+►Atividade 1
+►Faça um programa em C que o usuário digite 10 elementos do tipo inteiro, que serão armazenados em um vetor inicial. 
+►O programa deve gerar dois novos vetores a partir do vetor inicial, sendo um vetor com números pares e outro vetor com números ímpares. 
+►DICA: Utilize o operador de módulo (%) para determinar se um número é par ou ímpar. Quando o número é par o resto da divisão do número por 2 é igual a zero.
+*/
+
 #include <stdio.h> 
 #include <stdlib.h> 
 
